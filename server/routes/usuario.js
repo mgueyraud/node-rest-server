@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const Usuario = require('../models/usuario');
 
+
 const { verificaToken, verificaAdmin_Role } = require('../middlewares/autenticacion');
 
 const bycrpt = require('bcrypt');
@@ -158,5 +159,7 @@ app.delete('/usuario/:id', [verificaToken, verificaAdmin_Role], (req, res) => {
 
 
 });
+
+
 
 module.exports = app;
