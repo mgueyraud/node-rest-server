@@ -13,7 +13,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
 app.use(bodyParser.json());
 
-app.use(require('./routes/usuario'));
+
+// configuracion de rutas
+app.use(require('./routes/index'));
 
 
 app.get('/', (req, res) => {
@@ -21,6 +23,8 @@ app.get('/', (req, res) => {
 });
 
 
+
+//Conexion a base de datos
 
 mongoose.connect(process.env.URLBD, { useNewUrlParser: true, useCreateIndex: true, useFindAndModify: true }, (err, resp) => {
     if (err) throw new err;
