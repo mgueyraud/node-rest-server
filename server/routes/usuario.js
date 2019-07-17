@@ -37,7 +37,7 @@ app.get('/usuario', verificaToken, (req, res) => {
                     err
                 });
             }
-
+            // Funcion para obtener el conteo segun la condicion
             Usuario.countDocuments({ estado: true }, (err, conteo) => {
                 res.json({
                     ok: true,

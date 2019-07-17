@@ -22,9 +22,9 @@ app.use(require('./routes/index'));
 
 app.use(express.static(path.resolve(__dirname, '../public')));
 
-app.get('/', (req, res) => {
-    res.json('Hello World');
-});
+// app.get('/', (req, res) => {
+//     res.json('Hello World');
+// });
 
 
 

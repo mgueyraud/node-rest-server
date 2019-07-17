@@ -38,6 +38,10 @@ let verificaToken = (req, res, next) => {
 
 };
 
+// =============================
+// Verificar SI es administrador
+//===============================
+
 
 let verificaAdmin_Role = (req, res, next) => {
 
