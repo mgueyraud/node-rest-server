@@ -28,6 +28,10 @@ app.use(express.static(path.resolve(__dirname, '../public')));
 
 
 
+
+
+
+
 //Conexion a base de datos
 
 mongoose.connect(process.env.URLBD, { useNewUrlParser: true, useCreateIndex: true, useFindAndModify: true }, (err, resp) => {
